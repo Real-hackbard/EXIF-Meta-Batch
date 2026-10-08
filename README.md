@@ -62,7 +62,7 @@ The Exif tag structure is borrowed from TIFF files. On several image specific pr
 
 | Key | HEX | Type | Tag description |
 | :-----------: | :-----------: | :-----------: | :-----------: |
-| SubDir     | $8769     | Long     | A pointer to the Exif IFD. Interoperability, Exif IFD has the same structure as that of the IFD specified in TIFF. ordinarily, however, it does not contain image data as in the case of TIFF.     |
-| ThumbOffset     | $0201     | Long     | The offset to the start byte (SOI) of JPEG compressed thumbnail data. This is not used for primary image JPEG data.     |
-| ThumbLen     | $0202     | Long     | The number of bytes of JPEG compressed thumbnail data. This is not used for primary image JPEG data. JPEG thumbnails are not divided but are recorded as a continuous JPEG bitstream from SOI to EOI. Appn and COM markers should not be recorded. Compressed thumbnails must be recorded in no more than 64 Kbytes, including all other data to be recorded in APP1.     |
+| ```SubDir```     | $8769     | Long     | A pointer to the Exif IFD. Interoperability, Exif IFD has the same structure as that of the IFD specified in TIFF. ordinarily, however, it does not contain image data as in the case of TIFF.     |
+| ```ThumbOffset```     | $0201     | Long     | The offset to the start byte (SOI) of JPEG compressed thumbnail data. This is not used for primary image JPEG data.     |
+| ```ThumbLen```     | $0202     | Long     | The number of bytes of JPEG compressed thumbnail data. This is not used for primary image JPEG data. JPEG thumbnails are not divided but are recorded as a continuous JPEG bitstream from SOI to EOI. Appn and COM markers should not be recorded. Compressed thumbnails must be recorded in no more than 64 Kbytes, including all other data to be recorded in APP1.     |
 
