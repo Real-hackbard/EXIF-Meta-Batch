@@ -81,7 +81,7 @@ Change the header address
 function TImageMetaData.SaveToJpeg(Bitmap: TBitmap; FileName: string;
                                   ThumbMaxSize: integer): boolean;
 const
-  JpegHeader: array[0..19] of byte = ($FF,$D8,$FF,$E1,  // FF E1 (for JPEG)
+  JpegHeader: array[0..19] of byte = ($FF,$D8,$FF,$E1,  // $FF $D8 FF E1 (for JPEG)
                                       0,0,
                                       $45,$78,$69,$66,0,0,
                                       $49,$49,$2A,0,$08,0,0,0);
@@ -91,7 +91,7 @@ const
 function TImageMetaData.SaveToJpeg(Bitmap: TBitmap; FileName: string;
                                   ThumbMaxSize: integer): boolean;
 const
-  JpegHeader: array[0..19] of byte = ($FF,$D8,$FF,$E1,  // FF E0 (for JFIF)
+  JpegHeader: array[0..19] of byte = ($FF,$D8,$FF,$E1,  // $FF $D8 FF E0 (for JFIF)
                                       0,0,
                                       $45,$78,$69,$66,0,0,
                                       $49,$49,$2A,0,$08,0,0,0);
