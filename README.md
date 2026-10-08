@@ -66,3 +66,35 @@ The Exif tag structure is borrowed from TIFF files. On several image specific pr
 | ```ThumbOffset```     | $0201     | Long     | The offset to the start byte (SOI) of JPEG compressed thumbnail data. This is not used for primary image JPEG data.     |
 | ```ThumbLen```     | $0202     | Long     | The number of bytes of JPEG compressed thumbnail data. This is not used for primary image JPEG data. JPEG thumbnails are not divided but are recorded as a continuous JPEG bitstream from SOI to EOI. Appn and COM markers should not be recorded. Compressed thumbnails must be recorded in no more than 64 Kbytes, including all other data to be recorded in APP1.     |
 
+<br>
+
+# :speech_balloon: File format structure
+A JFIF file consists of a sequence of markers or marker segments (for details refer to JPEG, [Syntax and structure](https://en.wikipedia.org/wiki/JPEG#Syntax_and_structure)). The markers are defined in part 1 of the JPEG Standard. Each marker consists of two bytes: an FF byte followed by a byte which is not equal to 00 or FF and specifies the type of the marker. Some markers stand alone, but most indicate the start of a marker segment that contains data bytes according to the following pattern:
+
+```FF xx s1 s2 [data bytes]```
+
+The bytes s1 and s2 are taken together to represent a big-endian 16-bit integer specifying the length of the following "data bytes" plus the 2 bytes used to represent the length. In other words, s1 and s2 specify the number of the following data bytes as ```256 s1+s2-2
+
+Change the header address
+
+```pascal
+function TImageMetaData.SaveToJpeg(Bitmap: TBitmap; FileName: string;
+                                  ThumbMaxSize: integer): boolean;
+const
+  JpegHeader: array[0..19] of byte = ($FF,$D8,$FF,$E1,  // FF E1 (for JPEG)
+                                      0,0,
+                                      $45,$78,$69,$66,0,0,
+                                      $49,$49,$2A,0,$08,0,0,0);
+[..]
+
+
+function TImageMetaData.SaveToJpeg(Bitmap: TBitmap; FileName: string;
+                                  ThumbMaxSize: integer): boolean;
+const
+  JpegHeader: array[0..19] of byte = ($FF,$D8,$FF,$E1,  // FF E0 (for JFIF)
+                                      0,0,
+                                      $45,$78,$69,$66,0,0,
+                                      $49,$49,$2A,0,$08,0,0,0);
+[..]
+```
+
