@@ -85,7 +85,7 @@ const
                                       0,0,
                                       $45,$78,$69,$66,0,0,
                                       $49,$49,$2A,0,$08,0,0,0);
-[..]
+{..}
 
 
 function TImageMetaData.SaveToJpeg(Bitmap: TBitmap; FileName: string;
@@ -95,6 +95,6 @@ const
                                       0,0,
                                       $45,$78,$69,$66,0,0,
                                       $49,$49,$2A,0,$08,0,0,0);
-[..]
+{..}
 ```
 
