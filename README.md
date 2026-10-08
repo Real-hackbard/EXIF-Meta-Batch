@@ -50,10 +50,10 @@ The Exif tag structure is borrowed from TIFF files. On several image specific pr
 | Sharpness     | $A40A     | Short     | This tag indicates the direction of sharpness processing applied by the camera when the image was shot.     |
 | Copyright     | $8298     | ASCII     | Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image. The Interoperability copyright statement including date and rights should be written in this field; e.g., "Copyright, John Smith, 19xx. All rights reserved.". In this standard the field records both the photographer and editor copyrights, with each recorded in a separate part of the statement. When there is a clear distinction between the photographer and editor copyrights, these are to be written in the order of photographer followed by editor copyright, separated by NULL (in this case since the statement also ends with a NULL, there are two NULL codes). When only the photographer copyright is given, it is terminated by one NULL code. When only the editor copyright is given, the photographer copyright part consists of one space followed by a terminating NULL code, then the editor copyright is given. When the field is left blank, it is treated as unknown.     |
 | UserComment1     | $9286     | ASCII     | A tag for Exif users to write keywords or comments on the image besides those in <ImageDescription>, and without the character code limitations of the <ImageDescription> tag.     |
-| Zelle 1,1     | Zelle 1,2     | Zelle 1,3     | Zelle 1,3     |
-| Zelle 2,1     | Zelle 2,2     | Zelle 2,3     | Zelle 1,3     |
-| Zelle 1,1     | Zelle 1,2     | Zelle 1,3     | Zelle 1,3     |
-| Zelle 2,1     | Zelle 2,2     | Zelle 2,3     | Zelle 1,3     |
+| Artist     | $013B     | ASCII     | This tag records the name of the camera owner, photographer or image creator. The detailed format is not specified, but it is recommended that the information be written as in the example below for ease of Interoperability. When the field is left blank, it is treated as unknown. Ex.) "Camera owner, John Smith; Photographer, Michael Brown; Image creator, Ken James"     |
+| ExifVersion     | $9000     | Undefined     | The version of this standard supported. Nonexistence of this field is taken to mean nonconformance to the standard.     |
+| LensMake     | $A433     | ASCII     | This tag records the lens manufactor as an ASCII string.     |
+| Software     | $0131     | ASCII     | This tag records the name and version of the software or firmware of the camera or image input device used to generate the image. The detailed format is not specified, but it is recommended that the example shown below be followed. When the field is left blank, it is treated as unknown.     |
 
 
 
