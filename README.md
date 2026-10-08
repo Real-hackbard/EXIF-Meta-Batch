@@ -40,6 +40,18 @@ The Exif tag structure is borrowed from TIFF files. On several image specific pr
 | Iso     | $8827     | Short     | Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232.     |
 | OriginalDate     | $9003     | ASCII     | The date and time when the original image data was generated.     |
 | MeteringMode     | $9207     | Short     | The metering mode.     |
+| Focal     | $920A     | Rational     | The actual focal length of the lens, in mm.     |
+| ImageWidth     | $A002     | Long     | Information specific to compressed data. When a compressed file is recorded, the valid width of the meaningful image must be recorded in this tag, whether or not there is padding data or a restart marker. This tag should not exist in an uncompressed file.     |
+| ImageHeight     | $A003     | Long     | Information specific to compressed data. When a compressed file is recorded, the valid height of the meaningful image must be recorded in this tag, whether or not there is padding data or a restart marker. This tag should not exist in an uncompressed file. Since data padding is unnecessary in the vertical direction, the number of lines recorded in this valid image height tag will in fact be the same as that recorded in the SOF.     |
+| WhiteBalance     | $A403     | Short     | This tag indicates the white balance mode set when the image was shot.     |
+| Focal35mm     | $A405     | Short     | This tag indicates the equivalent focal length assuming a 35mm film camera, in mm. A value of 0 means the focal length is unknown. Note that this tag differs from the <FocalLength> tag.     |
+| Contrast     | $A408     | Short     | This tag indicates the direction of contrast processing applied by the camera when the image was shot.     |
+| Saturation     | $A409     | Short     | This tag indicates the direction of saturation processing applied by the camera when the image was shot.     |
+| Sharpness     | $A40A     | Short     | This tag indicates the direction of sharpness processing applied by the camera when the image was shot.     |
+| Copyright     | $8298     | ASCII     | Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image. The Interoperability copyright statement including date and rights should be written in this field; e.g., "Copyright, John Smith, 19xx. All rights reserved.". In this standard the field records both the photographer and editor copyrights, with each recorded in a separate part of the statement. When there is a clear distinction between the photographer and editor copyrights, these are to be written in the order of photographer followed by editor copyright, separated by NULL (in this case since the statement also ends with a NULL, there are two NULL codes). When only the photographer copyright is given, it is terminated by one NULL code. When only the editor copyright is given, the photographer copyright part consists of one space followed by a terminating NULL code, then the editor copyright is given. When the field is left blank, it is treated as unknown.     |
+| UserComment1     | $9286     | ASCII     | A tag for Exif users to write keywords or comments on the image besides those in <ImageDescription>, and without the character code limitations of the <ImageDescription> tag.     |
+| Zelle 1,1     | Zelle 1,2     | Zelle 1,3     | Zelle 1,3     |
+| Zelle 2,1     | Zelle 2,2     | Zelle 2,3     | Zelle 1,3     |
 | Zelle 1,1     | Zelle 1,2     | Zelle 1,3     | Zelle 1,3     |
 | Zelle 2,1     | Zelle 2,2     | Zelle 2,3     | Zelle 1,3     |
 
