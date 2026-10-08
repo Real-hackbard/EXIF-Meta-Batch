@@ -21,7 +21,8 @@ Exchangeable image file format (officially Exif, according to JEIDA/JEITA/CIPA s
 <br>
 <br>
 
-Import formats : jpeg; jpg; jfif;
+Import formats : ```jpeg; jpg; jfif;```
+Output formats : ```jpeg; jpg; jfif;```
 
 The Exif tag structure is borrowed from TIFF files. On several image specific properties, there is a large overlap between the tags defined in the TIFF, Exif, TIFF/EP, and DCF standards. For descriptive metadata, there is an overlap between Exif, [IPTC](https://en.wikipedia.org/wiki/IPTC_Information_Interchange_Model) Information Interchange Model and [XMP](https://en.wikipedia.org/wiki/Extensible_Metadata_Platform) info, which also can be embedded in a JPEG file. The [Metadata Working Group](https://en.wikipedia.org/wiki/Metadata_Working_Group) has guidelines on mapping tags between these standards.
 
