@@ -28,5 +28,5 @@ The Exif tag structure is borrowed from TIFF files. On several image specific pr
 | Key | HEX | Type | Tag description |
 | :----------- | :----------- | :----------- | :----------- |
 | Description     | $010E     | ASCII | A character string giving the title of the image. It may be a comment such as "1988 company picnic" or the like. Two-bytes character codes cannot be used. When a 2-bytes code is necessary, the Exif Private tag <UserComment> is to be used.     |
-| Zelle 2,1     | Zelle 2,2     | Zelle 2,3     |
+| Maker     | $010F     | ASCII | The manufacturer of the recording equipment. This is the manufacturer of the DSC, scanner, video digitizer or other equipment that generated the image. When the field is left blank, it is treated as unknown.     |
 
