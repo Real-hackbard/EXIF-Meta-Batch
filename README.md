@@ -14,8 +14,14 @@
 
 Exchangeable image file format (officially Exif, according to JEIDA/JEITA/CIPA specifications) is a standard that specifies formats for images, sound, and ancillary tags used by digital cameras (including smartphones), scanners and other systems handling image and sound files recorded by [digital cameras](https://en.wikipedia.org/wiki/Digital_camera). The specification uses the following existing encoding formats with the addition of specific [metadata](https://en.wikipedia.org/wiki/Metadata) tags: JPEG lossy coding for compressed image files, [TIFF](https://en.wikipedia.org/wiki/TIFF) Rev. 6.0 ([RGB](https://en.wikipedia.org/wiki/RGB_color_model) or [YCbCr](https://en.wikipedia.org/wiki/YCbCr)) for uncompressed image files, and [RIFF](https://en.wikipedia.org/wiki/Resource_Interchange_File_Format) WAV for audio files (linear PCM or ITU-T [G.711](https://en.wikipedia.org/wiki/G.711) μ-law [PCM](https://en.wikipedia.org/wiki/Pulse-code_modulation) for uncompressed audio data, and IMA-ADPCM for compressed audio data). It does not support JPEG 2000 or GIF encoded images. This standard consists of the Exif image file specification and the Exif audio file specification.
 
+<br>
 
+<img src="https://github.com/user-attachments/assets/79b84741-d3d5-40d3-8813-3881ad83e0d1" />
 
+<br>
+<br>
+
+The Exif tag structure is borrowed from TIFF files. On several image specific properties, there is a large overlap between the tags defined in the TIFF, Exif, TIFF/EP, and DCF standards. For descriptive metadata, there is an overlap between Exif, [IPTC](https://en.wikipedia.org/wiki/IPTC_Information_Interchange_Model) Information Interchange Model and [XMP](https://en.wikipedia.org/wiki/Extensible_Metadata_Platform) info, which also can be embedded in a JPEG file. The [Metadata Working Group](https://en.wikipedia.org/wiki/Metadata_Working_Group) has guidelines on mapping tags between these standards.
 
 
 
