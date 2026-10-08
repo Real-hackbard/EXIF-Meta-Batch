@@ -32,4 +32,16 @@ The Exif tag structure is borrowed from TIFF files. On several image specific pr
 | :----------- | :----------- | :----------- | :----------- |
 | Description     | $010E     | ASCII | A character string giving the title of the image. It may be a comment such as "1988 company picnic" or the like. Two-bytes character codes cannot be used. When a 2-bytes code is necessary, the Exif Private tag <UserComment> is to be used.     |
 | Maker     | $010F     | ASCII | The manufacturer of the recording equipment. This is the manufacturer of the DSC, scanner, video digitizer or other equipment that generated the image. When the field is left blank, it is treated as unknown.     |
+| Model     | $0110     | ASCII     | The model name or model number of the equipment. This is the model name or number of the DSC, scanner, video digitizer or other equipment that generated the image. When the field is left blank, it is treated as unknown.     |
+| Date     | $0132     | ASCII     | The date and time of image creation. In Exif standard, it is the date and time the file was changed.     |
+| Speed     | $829A     | Rational     | Exposure time, given in seconds.     |
+| Aperture     | $829D     | Rational     | The F number.     |
+| ExpoProgram     | $8822     | Short     | The class of the program used by the camera to set exposure when the picture is taken.     |
+| Iso     | $8827     | Short     | Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232.     |
+| OriginalDate     | $9003     | ASCII     | The date and time when the original image data was generated.     |
+| MeteringMode     | $9207     | Short     | The metering mode.     |
+| Zelle 1,1     | Zelle 1,2     | Zelle 1,3     | Zelle 1,3     |
+| Zelle 2,1     | Zelle 2,2     | Zelle 2,3     | Zelle 1,3     |
+
+
 
